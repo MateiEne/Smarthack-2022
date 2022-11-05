@@ -4,7 +4,8 @@ import socket
 class Network:
     def __init__(self):
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server = "YOUR LOCAL IPV4"
+        # read the server IP address from the command line
+        self.server = str(input("Enter the server IP address: "))
         self.port = 5555
         self.addr = (self.server, self.port)
         self.pos = self.connect()

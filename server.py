@@ -2,7 +2,13 @@ import socket
 from _thread import *
 import sys
 
-server = "192.168.22.44"
+# read the server IP address from the command line
+server_raw = input("Enter the server IP address: ")
+server = str(server_raw)
+
+# read the port number from the command line
+port_raw = input("Enter the port number: ")
+port = int(port_raw)
 port = 5555
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
