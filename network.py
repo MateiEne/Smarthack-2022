@@ -6,7 +6,8 @@ class Network:
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # read the server IP address from the command line
         self.server = str(input("Enter the server IP address: "))
-        self.port = 5555
+        # read the port number from the command line
+        self.port = int(input("Enter the port number: "))
         self.addr = (self.server, self.port)
         self.pos = self.connect()
 
